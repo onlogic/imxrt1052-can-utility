@@ -217,6 +217,9 @@ def main():
                 print(f"Received: {received_msg}")
 
             elif mode == 'loopback':
+                # NOTE: Use this mode only if you have the relevant CAN ports looped back to eachother
+                # with proper termination.
+
                 # Generate data string
                 number, is_increment, data = inc_dec_data_string(number, is_increment)
 
